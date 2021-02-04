@@ -8,8 +8,8 @@ from twilio.rest import Client
 load_dotenv()
 account_sid = os.getenv('ACCOUNT_SID')
 auth_token = os.getenv('AUTH_TOKEN')
-number_from = os.getenv('PHONE_NUMBER_FROM')
-number_to = os.getenv('PHONE_NUMBER_TO')
+NUMBER_FROM = os.getenv('PHONE_NUMBER_FROM')
+NUMBER_TO = os.getenv('PHONE_NUMBER_TO')
 BASE_URL = 'https://api.vk.com/method/users.get'
 token_vk = os.getenv('TOKEN_VK')
 v_api = '5.92'
@@ -30,8 +30,8 @@ def get_status(user_id):
 def send_sms(sms_text):
     message = client.messages.create(
         body=sms_text,
-        from_=number_from,
-        to=number_to,
+        from_=NUMBER_FROM,
+        to=NUMBER_TO,
     )
     return message.sid
 
