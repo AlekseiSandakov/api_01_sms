@@ -8,7 +8,7 @@ from twilio.rest import Client
 load_dotenv()
 account_sid = os.getenv('ACCOUNT_SID')
 auth_token = os.getenv('AUTH_TOKEN')
-NUMBER_FROM = os.getenv('PHONE_NUMBER_FROM')
+NUMBER_FROM = '+12013457497'
 NUMBER_TO = '+79069760990'
 BASE_URL = 'https://api.vk.com/method/users.get'
 token_vk = os.getenv('TOKEN_VK')
